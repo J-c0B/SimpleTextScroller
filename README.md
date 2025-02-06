@@ -14,7 +14,7 @@ sts --help
 ```
 sts -h
 ```
-![Img1](/assets/image/Img-1-showcase.jpg)
+![](/assets/image/Img-1-showcase.jpg)
 
 
 
@@ -23,9 +23,9 @@ sts -h
 ```
 sts "Hello, World!"
 
-```
+``` 
 
-![Showcase1](/assets/gif/Usage-1-sts-showcase.gif)
+![](/assets/gif/Usage-1-sts-showcase.gif)
 
 - **Scroll time manipulation**
     
@@ -35,7 +35,7 @@ sts "Hello, World!"
 ```
 sts "Hello, World!" -t 100
 ```
-![Showcase2](/assets/gif/Usage-2-sts-showcase.gif)
+![](/assets/gif/Usage-2-sts-showcase.gif)
 
 > [!IMPORTANT]
 > To quit the sts , just simply press q.
