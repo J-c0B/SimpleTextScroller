@@ -83,8 +83,10 @@ if(argc > 1)
 
 if(strcmp(argv[1],"-h") == 0 || strcmp(argv[1],"-help") == 0 || strcmp(argv[1],"--help") == 0)
 {
+    //To quit the sts , just simply press q.
 printf("--help , -help , --h , -h \t prints available commands.\n --time , -time , -t \t sets the time between every message scroll.\n");
-printf("--install , -install , -i \t Install the SimpleTextScroller.\n --uninstall , -uninstall , -u Uninstall the SimpleTextScroller.\n");   
+printf("--install , -install , -i \t Install the SimpleTextScroller.\n --uninstall , -uninstall , -u Uninstall the SimpleTextScroller.\n");
+printf("\n To quit press Q .\n");   
 eexit(0);
 }
 else if(strcmp(argv[1],"-i") == 0 || strcmp(argv[1],"-install") == 0 || strcmp(argv[1],"--install") == 0)
