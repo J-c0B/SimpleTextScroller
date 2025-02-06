@@ -5,7 +5,7 @@
 
 ## Usage 
     
-- ** More information <sub>( help )</sub> **
+- **More information <sub>( help )</sub>**
 
 ```
 sts --help 
