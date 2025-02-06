@@ -1,7 +1,7 @@
 # SimpleTextScroller
 
  A text scroller which scrolls a desired text on the terminal.
- It aims to provide coll, yet useless message display.
+ It aims to provide cool, yet useless message display.
 
 ## Usage 
     
