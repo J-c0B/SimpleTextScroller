@@ -34,17 +34,36 @@ void movecursor(struct cursor_position c_pos)
 printf("\x1B[%i;%iH",c_pos.y,c_pos.x);
 }
 
-void scroll(struct shellsize size,char line[])
+void scroll(struct shellsize size,char line[],bool direction)
 {
-char l_char = ' ',n_char = ' ';
+static char l_char = ' ',n_char = ' ';
 
-for (int n = 0 ; n < size.x ; n++)
+if(direction)
+    for (int n = 0 ; n <= size.x ; n++)
 {
 l_char = n_char;
 n_char = line[n];
 
 if(n == size.x-1)
-    line[0] = l_char;
+{
+    line[0] = n_char;
+    line[n] = l_char;
+} 
+else
+    line[n] = l_char;
+
+}
+else
+    for (int n = size.x ; n >= 0; n--)
+{
+l_char = n_char;
+n_char = line[n];
+
+if(n == 0)
+{
+    line[size.x-1] = n_char;
+    line[n] = l_char;
+}
 else
     line[n] = l_char;
 
