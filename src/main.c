@@ -21,6 +21,7 @@
 #define MAX_SIZE 8192
 
 int wtime = 50;
+bool direction = true; // true - from left to right , false - from right to left 
 
 int main(int argc, char *argv[])
 {
@@ -34,7 +35,6 @@ char * message = Arguments(argc,argv);
 char line[MAX_SIZE];
 char * p_message = &line[strlen(message)];
 bool qsignal = false;
-
 
 
 Getshellsize(&s_size);
@@ -61,7 +61,7 @@ for(int n = 0 ; n <= s_size.x ; n++)
         continue;
     }
     print(line,s_size);
-    scroll(s_size,line,false);
+    scroll(s_size,line,direction);
     movecursor(start_pos);
     p_message++;
 }
@@ -80,6 +80,9 @@ char * string;
 
 if(argc > 1)
 {
+
+
+
 
 
 if(strcmp(argv[1],"-h") == 0 || strcmp(argv[1],"-help") == 0 || strcmp(argv[1],"--help") == 0)
@@ -115,6 +118,13 @@ else
     Arg_Err();
 
 }
+else if(strcmp(argv[n], "-d") == 0 || strcmp(argv[n], "-direction") == 0 || strcmp(argv[n], "--direction") == 0)
+{
+direction = false;
+if(argc < 3)
+    Arg_Err();
+
+}
 else if (string == NULL)
 {
 string = argv[n];
@@ -128,6 +138,8 @@ else
     Arg_Err();
 
 }
+
+
 void eexit(int code)
 {
     if(code == -1)

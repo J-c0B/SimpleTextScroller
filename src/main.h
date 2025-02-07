@@ -1,3 +1,14 @@
+/*
+*   
+*   SimpleTextScroller
+*   
+*   author : J-c0B
+*   github : https://github.com/J-c0B
+*   email : gjak2700@gmail.com 
+*
+*
+*/
+
 #include <stdio.h>
 #include <errno.h>
 
